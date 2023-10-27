@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Biblioteca Triple Peaks</title>
     <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./styles/normalize.css" />
@@ -10,7 +13,6 @@
   </head>
 
   <body>
-    <!-- Envolva todo o conteúdo da página em um novo div com a classe da página. Lembre-se de adicionar a tag de fechamento -->
     <div class="page">
       <header class="header">
         <nav class="nav">
@@ -19,43 +21,45 @@
             alt="Triple Peaks Library Logo"
             class="nav__logo"
           />
-          <!-- Colocar links de navegação em uma lista é considerada a melhor prática para escrever códigos semânticos, porque permite que leitores de tela façam uma pausa entre cada link em vez de ler todos como se fossem uma só frase. -->
           <div class="select">
-            <!--eu criei-->
             <ul class="nav__links">
               <li>
-                <a class="nav__link">Escolhas da Equipe</a>
+                <a href="#equipe" class="nav__link">Escolhas da Equipe</a>
               </li>
               <li>
-                <a class="nav__link">Eventos</a>
+                <a href="#eventos" class="nav__link">Eventos</a>
               </li>
               <li>
-                <a class="nav__link">Seja um membro</a>
+                <a href="#membro" class="nav__link">Seja um membro</a>
               </li>
               <li>
-                <a class="nav__link">Sobre</a>
+                <a href="#sobre" class="nav__link">Sobre</a>
               </li>
               <li>
-                <a class="nav__link">Contatos</a>
+                <a href="#contatos" class="nav__link">Contatos</a>
               </li>
             </ul>
           </div>
         </nav>
-        <h1 class="header__title">Bem-vindo à Biblioteca Triple Peaks</h1>
-        <p class="header__description">
-          Temos o prazer de abrir as portas da nossa biblioteca a todos! Venha
-          expandir seus conhecimentos de desenvolvimento, ou apenas use esse
-          belo local para trabalhar ou estudar. Este é um lugar legal para
-          estudantes legais!
-        </p>
-        <img
-          src="./images/inside_the_library.png"
-          alt="Illustration 'Inside the
-          library'"
-          class="header__image"
-        />
+        <div class="header__title-info">
+          <h1 class="header__title">Bem-vindo à Biblioteca Triple Peaks</h1>
+          <p class="header__description">
+            Temos o prazer de abrir as portas da nossa biblioteca a todos! Venha
+            expandir seus conhecimentos de desenvolvimento, ou apenas use esse
+            belo local para trabalhar ou estudar. Este é um lugar legal para
+            estudantes legais!
+          </p>
+        </div>
+        <div class="header__image-library">
+          <img
+            src="./images/inside_the_library.png"
+            alt="Illustration 'Inside the
+            library'"
+            class="header__image"
+          />
+        </div>
         <div class="header__footer">
-          <a class="header__link">Sobre a biblioteca &darr;</a>
+          <a href="#sobre" class="header__link">Sobre a biblioteca &darr;</a>
           <p class="header__address">
             200 Success Avenue, The Town of Triple Peaks
           </p>
@@ -63,9 +67,9 @@
       </header>
 
       <main class="content">
-        <section class="events">
+        <section class="events" id="eventos">
           <div class="events__content">
-            <h2 class="events__heading">Proximos eventos:</h2>
+            <h2 class="events__heading">Próximos eventos:</h2>
             <h3 class="events__title">
               Em homenagem a Joan Feynman: Mulheres na Astrofísica
             </h3>
@@ -92,9 +96,8 @@
               objetivo mudar essa visão e provar que isso não acontece desde
               pelo menos o século XVIII.
             </p>
-            <a href="#" class="events__more">Mais eventos &rarr;</a>
+            <a href="#eventos" class="events__more">Mais eventos &rarr;</a>
           </div>
-          <!-- Start creating the composition here -->
           <div class="events__cover">
             <img
               src="./images/cafe.png"
@@ -144,18 +147,19 @@
           </div>
         </section>
 
-        <section class="staff">
-          <!-- --------------------------------------------------------------- -->
-          <!--   Não apague os comentários até a última etapa do projeto       -->
-          <!-- --------------------------------------------------------------- -->
-          <!--<h2 class="staff__title">Escolhas da Equipe</h2>
+        <section class="staff" id="equipe">
+          <h2 class="staff__title">Escolhas da Equipe</h2>
           <p class="staff__subtitle">Que nossos leitores adoram</p>
-          <ul>
+          <ul class="staff__card">
             <li class="card">
               <div class="card__content">
                 <h3 class="card__title">Algoritmos: Teoria e Prática</h3>
                 <p class="card__text">
-                  O nome deste livro é autoexplicativo; é uma introdução adequada aos algoritmos! Introdução aos algoritmos, ou CLRS, em referência aos sobrenomes dos autores, é aprofundada e abrange uma variedade de algoritmos em vários capítulos independentes.
+                  O nome deste livro é autoexplicativo; é uma introdução
+                  adequada aos algoritmos! Introdução aos algoritmos, ou CLRS,
+                  em referência aos sobrenomes dos autores, é aprofundada e
+                  abrange uma variedade de algoritmos em vários capítulos
+                  independentes.
                 </p>
                 <p class="card__footer">
                   Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest,
@@ -167,10 +171,14 @@
             <li class="card">
               <div class="card__content">
                 <h3 class="card__title">
-                  A Estrutura e Interpretação de Programas de Computador (sigla em inglês, SICP)
+                  A Estrutura e Interpretação de Programas de Computador (sigla
+                  em inglês, SICP)
                 </h3>
                 <p class="card__text">
-                  Esse é um dos melhores livros para aprender os fundamentos da programação. Apresentado pelo MIT em um de seus cursos básicos de programação, o SICP é um livro de programação de uso geral que usa Esquema para ilustrar vários conceitos de programação.
+                  Esse é um dos melhores livros para aprender os fundamentos da
+                  programação. Apresentado pelo MIT em um de seus cursos básicos
+                  de programação, o SICP é um livro de programação de uso geral
+                  que usa Esquema para ilustrar vários conceitos de programação.
                 </p>
                 <p class="card__footer">
                   Harold Abelson, Gerald Jay Sussman, Julie Sussman
@@ -181,10 +189,16 @@
             <li class="card">
               <div class="card__content">
                 <h3 class="card__title">
-                  O Codificador Limpo: Um Código de Conduta para Programadores Profissionais
+                  O Codificador Limpo: Um Código de Conduta para Programadores
+                  Profissionais
                 </h3>
                 <p class="card__text">
-                  Compilado pelo experiente engenheiro de software e autor Robert C. Martin (também conhecido como Tio Bob), este livro aborda as técnicas e ferramentas do verdadeiro artesanato de software. Ele explica como escrever um código limpo e demonstra como cultivar a atitude de um programador profissional qualificado.
+                  Compilado pelo experiente engenheiro de software e autor
+                  Robert C. Martin (também conhecido como Tio Bob), este livro
+                  aborda as técnicas e ferramentas do verdadeiro artesanato de
+                  software. Ele explica como escrever um código limpo e
+                  demonstra como cultivar a atitude de um programador
+                  profissional qualificado.
                 </p>
                 <p class="card__footer">Steve McConnell</p>
               </div>
@@ -196,19 +210,20 @@
                   Code Complete: Um Manual Prático de Construção de Software
                 </h3>
                 <p class="card__text">
-                  Quer saber como escrever um código robusto, independentemente da arquitetura por trás da linguagem de programação escolhida? Em seguida, considere a leitura do livro: Code Complete: Um Manual Prático de Construção de Software. Ele brange de forma geral tudo relacionado a uma boa estrutura de código.
+                  Quer saber como escrever um código robusto, independentemente
+                  da arquitetura por trás da linguagem de programação escolhida?
+                  Em seguida, considere a leitura do livro: Code Complete: Um
+                  Manual Prático de Construção de Software. Ele abrange de forma
+                  geral tudo relacionado a uma boa estrutura de código.
                 </p>
                 <p class="card__footer">Steve McConnell</p>
               </div>
             </li>
-          </ul>-->
+          </ul>
         </section>
 
-        <section class="membership">
-          <!-- --------------------------------------------------------------- -->
-          <!--   Não apague os comentários até a última etapa do projeto       -->
-          <!-- --------------------------------------------------------------- -->
-          <!--<h2 class="membership__title">Ser membro da biblioteca é fácil!</h2>
+        <section class="membership" id="membro">
+          <h2 class="membership__title">Ser membro da biblioteca é fácil!</h2>
           <ul class="membership__steps">
             <li class="step">
               <h3 class="step__title">
@@ -260,32 +275,88 @@
                 Aproveite todos os incríveis benefícios de ser membro!
               </p>
             </li>
-          </ul>-->
+          </ul>
         </section>
 
-        <section class="about">
-          <!-- --------------------------------------------------------------- -->
-          <!--      Não apague os comentários até a última etapa do projeto    -->
-          <!-- --------------------------------------------------------------- -->
-          <!--<h2 class="about__title">Sobre a biblioteca</h2>
+        <section class="about" id="sobre">
+          <h2 class="about__title">Sobre a biblioteca</h2>
           <div class="about__content">
             <p class="about__paragraph">
-              As bibliotecas são essenciais em qualquer cidade, e a Biblioteca Triple Peaks não é exceção. Ele abriu suas portas pela primeira vez em 2018, assim que nossa humilde cidade começou a dar as boas-vindas aos seus primeiros cidadãos!
+              As bibliotecas são essenciais em qualquer cidade, e a Biblioteca
+              Triple Peaks não é exceção. Ele abriu suas portas pela primeira
+              vez em 2018, assim que nossa humilde cidade começou a dar as
+              boas-vindas aos seus primeiros cidadãos!
             </p>
             <p class="about__paragraph">
-              Desde sua abertura inicial, a biblioteca vem recebendo cerca de 342 visitantes mensais. É quase 50% da nossa população! Até o momento, a maioria da população tem gostado de fazer leituras de nossos livros e usar nossos amplos recursos on-line.
+              Desde sua abertura inicial, a biblioteca vem recebendo cerca de
+              342 visitantes mensais. É quase 50% da nossa população! Até o
+              momento, a maioria da população tem gostado de fazer leituras de
+              nossos livros e usar nossos amplos recursos on-line.
             </p>
             <p class="about__paragraph">
-              Torne-se um membro hoje e certifique-se de verificar nossa seção de escolhas da equipe. A seleção dessa semana está repleta de livros que qualquer pessoa interessada em programação adoraria conhecer!
+              Torne-se um membro hoje e certifique-se de verificar nossa seção
+              de escolhas da equipe. A seleção dessa semana está repleta de
+              livros que qualquer pessoa interessada em programação adoraria
+              conhecer!
             </p>
           </div>
-          <div class="about__circle"></div> -->
+          <div class="about__circle"></div>
         </section>
       </main>
-      <footer class="footer">
-        <!-- ----------------------------------------------------------------- -->
-        <!--      Não apague os comentários até a última etapa do projeto      -->
-        <!-- ----------------------------------------------------------------- -->
+
+      <footer class="footer" id="contatos">
+        <div class="footer__columns">
+          <div class="footer__column_logo">
+            <img
+              class="footer__logo"
+              src="./images/logo-white.svg"
+              alt="Logo Biblioteca Triple Peaks"
+            />
+            <div class="footer__copyright">
+              <p>© 2023 ValdeanGus</p>
+            </div>
+          </div>
+          <div class="footer__column">
+            <div class="footer__column_content_hours">
+              <h1 class="footer__column-heading">Horário de Funcionamento</h1>
+              <ul class="footer__list">
+                <li class="footer__list-item">Dias úteis: 9h - 20h</li>
+                <li class="footer__list-item">Finais de semanas: 10h às 18h</li>
+              </ul>
+            </div>
+            <div class="footer__column_content_social">
+              <h1 class="footer__column-heading">Redes Sociais</h1>
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a
+                    href="https://web.facebook.com/valdean.gust"
+                    target="_blank"
+                    class="footer__column-link"
+                    ><img
+                      src="./images/facebook_white.svg"
+                      class="footer__social-icon"
+                      alt="Facebook Logo"
+                    />
+                    Facebook</a
+                  >
+                </li>
+                <li class="footer__list-item">
+                  <a
+                    href="https://www.instagram.com/valdeangus"
+                    target="_blank"
+                    class="footer__column-link"
+                    ><img
+                      src="./images/instagram_white.svg"
+                      class="footer__social-icon"
+                      alt="Instagram Logo"
+                    />
+                    Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   </body>
